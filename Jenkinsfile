@@ -1,8 +1,8 @@
 pipeline{
   agent any
   parameters{
-     string(name: 'FIRST_NAME', defaultValue: 'ANIL')
-     string(name: 'LAST_NAME', defaultValue: 'DOLLOR')
+     string(name: 'FIRST_NAME', defaultValue: 'SUSHIL')
+     string(name: 'LAST_NAME', defaultValue: 'JAJRA')
   }
   stages{
     stage(''' Docker Installation '''){
