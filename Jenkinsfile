@@ -3,6 +3,7 @@ pipeline{
   stages{
     stage('First'){
       steps{
+        sh 'echo No error'
       }
     }
   }  
