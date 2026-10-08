@@ -1,0 +1,19 @@
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+
+    restart: unless-stopped
+    ports:
+      - "7070:80"
+    volumes:
+      - ./myapp:/var/www/html
+  jenkins:
+    image: jenkins/jenkins:latest
+    restart: unless-stopped
+    network_mode: host
+    user: root
+    privileged: true
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
